@@ -22,7 +22,7 @@ module Devise #:nodoc:
             before_filter :set_facebook_session
 
             rescue_from ::Facebooker::Session::SessionExpired, :with => :facebook_session_expired
-            rescue_from ::ActionController::InvalidAuthenticityToken, :with => :invalid_authenticity_token
+            #rescue_from ::ActionController::InvalidAuthenticityToken, :with => :invalid_authenticity_token
 
             helper_method :facebook_session
 
